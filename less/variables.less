@@ -108,7 +108,7 @@
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    @gray-darker;
 //** Global background color for active items (e.g., navs or dropdowns).
-@component-active-bg:       lighten(@body-bg, 7%);
+@component-active-bg:       @bg-light; //lighten(@body-bg, 7%);
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 @caret-width-base:          4px;
@@ -175,7 +175,7 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       lighten(@body-bg, 80%);
+@input-bg:                       lighten(@body-bg, 80%); //f7f7f9
 //** `<input disabled>` background color
 @input-bg-disabled:              @bg-light;
 
@@ -223,9 +223,9 @@
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-darker;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      @gray-dark;
+@dropdown-link-hover-color:      @gray-darker;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         lighten(@bg-light, 5%);
+@dropdown-link-hover-bg:         darken(@bg-light, 5%);
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -236,7 +236,7 @@
 @dropdown-link-disabled-color:   @gray-light;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @gray-light;
+@dropdown-header-color:          @gray-dark;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
 @dropdown-caret-color:           #000;
@@ -345,16 +345,16 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             @gray-darker;
-@navbar-default-bg:                @bg-light;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-bg:                darken(@bg-light, 5%);
+@navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                @gray-darker;
 @navbar-default-link-hover-color:          @gray-dark;
-@navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         @gray-dark;
-@navbar-default-link-active-bg:            lighten(@navbar-default-bg, 6.5%);
-@navbar-default-link-disabled-color:       @gray-lighter;
+@navbar-default-link-hover-bg:             lighten(@bg-light, 3%);
+@navbar-default-link-active-color:         @gray-darker;
+@navbar-default-link-active-bg:            @bg-light;
+@navbar-default-link-disabled-color:       @gray-light;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
@@ -363,8 +363,8 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           lighten(@body-bg, 7%);
-@navbar-default-toggle-icon-bar-bg:        lighten(@body-bg, 7%);
+@navbar-default-toggle-hover-bg:           @bg-light;
+@navbar-default-toggle-icon-bar-bg:        @bg-light;
 @navbar-default-toggle-border-color:       @border-color;
 
 
@@ -400,7 +400,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         @bg-light;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -412,7 +412,7 @@
 
 @nav-tabs-link-hover-border-color:          @nav-tabs-border-color;
 
-@nav-tabs-active-link-hover-bg:             lighten(@bg-light, 5%);
+@nav-tabs-active-link-hover-bg:             @bg-light;
 @nav-tabs-active-link-hover-color:          @gray-dark;
 @nav-tabs-active-link-hover-border-color:   @nav-tabs-border-color;
 
@@ -561,7 +561,7 @@
 @label-danger-bg:             @brand-danger;
 
 //** Default label text color
-@label-color:                 @gray-darker;
+@label-color:                 @gray-base;
 //** Default text color of a linked label
 @label-link-hover-color:      @gray-base;
 
@@ -670,7 +670,7 @@
 //** Text color of disabled list items
 @list-group-disabled-color:      @gray-light;
 //** Background color of disabled list items
-@list-group-disabled-bg:         @gray-lighter;
+@list-group-disabled-bg:         darken(@body-bg, 5%);
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
@@ -693,11 +693,11 @@
 @panel-inner-border:          @border-color;
 @panel-footer-bg:             @bg-light;
 
-@panel-default-text:          @gray-dark;
+@panel-default-text:          @gray-darker;
 @panel-default-border:        @border-color;
 @panel-default-heading-bg:    @bg-light;
 
-@panel-primary-text:          @gray-dark;
+@panel-primary-text:          @gray-darker;
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
@@ -773,9 +773,9 @@
 //** Breadcrumb background color
 @breadcrumb-bg:                 @bg-light;
 //** Breadcrumb text color
-@breadcrumb-color:              @gray-lighter;
+@breadcrumb-color:              @gray;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @gray;
+@breadcrumb-active-color:       @gray-dark;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 
